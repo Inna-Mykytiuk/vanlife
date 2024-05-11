@@ -6,11 +6,12 @@ import {NavBar} from './components/NavBar'
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Vans = lazy(() => import('./pages/Vans'));
+const VansDetail = lazy(() => import('./pages/VanDetail'));
+
 
 import '../server'
 
 function App() {
-
 
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
+          <Route path="/vans/:id" element={<VansDetail />} />
         </Routes>
       </Suspense>
     </>
