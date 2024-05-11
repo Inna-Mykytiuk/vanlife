@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 
 body {
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
 }
 
 .container {
@@ -55,6 +55,13 @@ body {
         margin: 0 auto;
     }
   
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -338,7 +345,7 @@ i[class*='van-type-'] {
     text-decoration: none;
 }
 
-.van-detail-container .back-button:visited {}
+/* .van-detail-container .back-button:visited {} */
 
 .van-detail-container .back-button span {
     text-decoration: underline;
