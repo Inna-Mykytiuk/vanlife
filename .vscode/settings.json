@@ -1,0 +1,9 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "diffEditor.codeLens": true,
+  "diffEditor.wordWrap": "on",
+  "editor.minimap.enabled": false
+}

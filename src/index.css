@@ -1,8 +1,19 @@
+@import-normalize;
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
+
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-color: #FFF7ED;
@@ -22,6 +33,30 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.container {
+  width: 360px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+      padding: 0 20px;
+      margin: 0 auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+      width: 1280px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+  
+}
+
 
 .site-wrapper {
     min-height: 100vh;
@@ -211,7 +246,7 @@ footer {
     flex-wrap: wrap;
 }
 
-.van-list-filter-buttons > a {
+.van-list-filter-buttons>a {
     margin-right: 15px;
 }
 
@@ -225,7 +260,7 @@ footer {
 
 .van-tile a {
     color: #161616;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .van-tile img {
@@ -262,15 +297,18 @@ footer {
     color: #FFEAD0;
 }
 
-.van-type.simple:hover, .van-type.simple.selected {
+.van-type.simple:hover,
+.van-type.simple.selected {
     background-color: #E17654;
 }
 
-.van-type.rugged:hover, .van-type.rugged.selected {
+.van-type.rugged:hover,
+.van-type.rugged.selected {
     background-color: #115E59;
 }
 
-.van-type.luxury:hover, .van-type.luxury.selected {
+.van-type.luxury:hover,
+.van-type.luxury.selected {
     background-color: #161616;
 }
 
@@ -300,9 +338,7 @@ i[class*='van-type-'] {
     text-decoration: none;
 }
 
-.van-detail-container .back-button:visited {
-    
-}
+.van-detail-container .back-button:visited {}
 
 .van-detail-container .back-button span {
     text-decoration: underline;
@@ -324,7 +360,7 @@ i[class*='van-type-'] {
     margin-bottom: 10px;
 }
 
-.van-detail > i {
+.van-detail>i {
     align-self: flex-start;
 }
 
@@ -384,7 +420,7 @@ i[class*='van-type-'] {
     padding-left: 24px;
 }
 
-.host-van-single > img {
+.host-van-single>img {
     height: 70px;
     border-radius: 5px;
     margin-right: 17px;
@@ -411,20 +447,20 @@ i[class*='van-type-'] {
     align-items: center;
 }
 
-.host-van-detail > img {
+.host-van-detail>img {
     height: 160px;
     border-radius: 5px;
     margin-right: 20px;
 }
 
-.host-van-detail-info-text > h3 {
+.host-van-detail-info-text>h3 {
     margin-top: 24px;
     margin-bottom: 5px;
     font-size: 26px;
     font-weight: 700;
 }
 
-.host-van-detail-info-text > h4 {
+.host-van-detail-info-text>h4 {
     font-size: 20px;
     margin-block: 0;
 }
@@ -455,12 +491,13 @@ i[class*='van-type-'] {
     font-weight: 700;
 }
 
-.host-van-detail-info > h4 {
+.host-van-detail-info>h4 {
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
 }
-.host-van-detail-info > h4 > span {
+
+.host-van-detail-info>h4>span {
     font-weight: 500;
 }
 
@@ -469,7 +506,7 @@ i[class*='van-type-'] {
     font-weight: 500;
 }
 
-.host-van-price > span {
+.host-van-price>span {
     font-size: 16px;
     color: #4D4D4D;
 }
@@ -500,10 +537,10 @@ i[class*='van-type-'] {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 500px;    
+    max-width: 500px;
 }
 
-.login-form > input {
+.login-form>input {
     border: 1px solid rgba(209, 213, 219);
     height: 40px;
     text-indent: 10px;
@@ -512,20 +549,20 @@ i[class*='van-type-'] {
     font-weight: 400;
 }
 
-.login-form > input:focus {
+.login-form>input:focus {
     outline: none;
 }
 
-.login-form > input:first-of-type {
+.login-form>input:first-of-type {
     border-radius: 6px 6px 0px 0px;
 }
 
-.login-form > input:last-of-type {
+.login-form>input:last-of-type {
     border-radius: 0px 0px 6px 6px;
     border-top: none;
 }
 
-.login-form > button {
+.login-form>button {
     background-color: #FF8C38;
     border: none;
     border-radius: 6px;
@@ -535,7 +572,7 @@ i[class*='van-type-'] {
     font-family: "Inter", sans-serif;
 }
 
-.login-form > button:disabled {
+.login-form>button:disabled {
     background-color: #aaaaaa;
     cursor: not-allowed;
 }
@@ -552,22 +589,22 @@ i[class*='van-type-'] {
     align-items: center;
 }
 
-.host-dashboard-earnings > .info > h1 {
+.host-dashboard-earnings>.info>h1 {
     font-size: 36px;
     color: #161616;
     margin: 0;
 }
 
-.host-dashboard-earnings > .info > p {
+.host-dashboard-earnings>.info>p {
     color: #4d4d4d;
 }
 
-.host-dashboard-earnings > .info > p > span {
+.host-dashboard-earnings>.info>p>span {
     text-decoration: underline;
     font-weight: bold;
 }
 
-.host-dashboard-earnings > .info > h2 {
+.host-dashboard-earnings>.info>h2 {
     margin: 0;
     font-size: 38px;
     color: #161616;
@@ -581,7 +618,7 @@ i[class*='van-type-'] {
     align-items: center;
 }
 
-.host-dashboard-reviews > h2 {
+.host-dashboard-reviews>h2 {
     margin: 0;
 }
 
@@ -598,7 +635,7 @@ i[class*='van-type-'] {
     margin-right: auto;
 }
 
-.host-dashboard-reviews p > span {
+.host-dashboard-reviews p>span {
     font-weight: bold;
     color: #161616;
 }
@@ -607,7 +644,7 @@ i[class*='van-type-'] {
     padding: 38px 26px;
 }
 
-.host-dashboard-vans > .top {
+.host-dashboard-vans>.top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -622,16 +659,16 @@ i[class*='van-type-'] {
     color: #161616;
 }
 
-.host-income > p {
+.host-income>p {
     color: #4d4d4d;
 }
 
-.host-income > p span {
+.host-income>p span {
     text-decoration: underline;
     font-weight: bold;
 }
 
-.host-income > h2 {
+.host-income>h2 {
     font-size: 38px;
     color: #161616;
     font-weight: 900;
@@ -642,16 +679,16 @@ img.graph {
     max-width: 500px;
 }
 
-.host-income .info-header > p {
+.host-income .info-header>p {
     color: #4d4d4d;
 }
 
-.host-income .info-header > p span {
+.host-income .info-header>p span {
     text-decoration: underline;
     font-weight: bold;
 }
 
-.host-income .info-header > h3 {
+.host-income .info-header>h3 {
     font-weight: 700;
     font-size: 24px;
     margin-top: 60px;
@@ -666,13 +703,14 @@ img.graph {
     padding: 35px 29px;
     border-radius: 6px;
 }
-.host-income .transaction > h3 {
+
+.host-income .transaction>h3 {
     font-size: 36px;
     font-weight: 600;
     margin: 0;
 }
 
-.host-income .transaction > p {
+.host-income .transaction>p {
     font-weight: 500;
     font-size: 20px;
     color: #4d4d4d;
@@ -689,24 +727,24 @@ img.graph {
     margin-bottom: 32px;
 }
 
-.host-reviews .top-text > h2 {
+.host-reviews .top-text>h2 {
     font-weight: 700;
     font-size: 32px;
     margin: 0;
     margin-right: 20px;
 }
 
-.host-reviews .top-text > p {
+.host-reviews .top-text>p {
     margin: 0;
     color: #4d4d4d;
 }
 
-.host-reviews .top-text > p span {
+.host-reviews .top-text>p span {
     text-decoration: underline;
     font-weight: bold;
 }
 
-.host-reviews > img {
+.host-reviews>img {
     margin-bottom: 36px;
 }
 

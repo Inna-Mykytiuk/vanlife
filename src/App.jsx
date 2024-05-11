@@ -1,24 +1,21 @@
-import { Link, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
+import { lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import {NavBar} from './components/NavBar'
 
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
+
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
 
 function App() {
 
 
   return (
     <>
-      <header>
-          <Link to="/">#VANLIFE</Link>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-        </nav>
-      </header>
+      <NavBar/>
 
       <Routes>
       <Route path="/" element={<Home/>}/>
