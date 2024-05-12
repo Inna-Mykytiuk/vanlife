@@ -65,6 +65,12 @@ body {
 }
 
 
+.nav-link.active {
+    font-weight: bold;
+    text-decoration:  underline;
+    color: #161616;
+}
+
 .site-wrapper {
     min-height: 100vh;
     display: flex;
@@ -158,6 +164,12 @@ footer {
 
 .link-button:hover {
     transform: translate(1px, 1px);
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /*** HOME PAGE ***/
