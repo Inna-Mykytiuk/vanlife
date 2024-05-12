@@ -1,5 +1,8 @@
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
+import {  NavLink  } from 'react-router-dom';
 
 export default function HostVanDetail() {
     const { id } = useParams()
@@ -36,6 +39,14 @@ export default function HostVanDetail() {
                     </div>
                 </div>
                 {/*Your changes will go here*/}
+                <nav className='host-nav'>
+                    <NavLink to="." className='nav-link' end>Details</NavLink>
+                    <NavLink to="pricing" className='nav-link'>Pricing</NavLink>
+                    <NavLink to="photos" className='nav-link'>Photos</NavLink>
+                </nav>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Outlet context={{currentVan}}/>  
+                </Suspense>
             </div>
         </section>
     )

@@ -11,7 +11,10 @@ const Dashboard = lazy(() => import('./pages/Host/Dashboard'));
 const Income = lazy(() => import('./pages/Host/Income'));
 const Reviews = lazy(() => import('./pages/Host/Reviews'));
 const HostVans = lazy(() => import('./pages/Host/HostVans'));
-const HostVansDetails = lazy(() => import('./pages/Host/HostVansDetails'));
+const HostVanDetails = lazy(() => import('./pages/Host/HostVansDetails'));
+const HostVanInfo  = lazy(() => import('./pages/Host/HostVanInfo'));
+const HostVanPricing = lazy(() => import('./pages/Host/HostVanPricing'));
+const HostVanPhotos = lazy(() => import('./pages/Host/HostVanPhotos'));
 
 
 import '../server'
@@ -23,17 +26,24 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="vans"element={<Vans />} />
+        <Route path="vans/:id" element={<VansDetail />} />
 
-        <Route path="vans">
+        {/* <Route path="vans">
           <Route index element={<Vans />} />
           <Route path=":id" element={<VansDetail />} />
-        </Route>
+        </Route> */}
     
         <Route path="host" element={<HostLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="income" element={<Income />} />
           <Route path="vans" element={<HostVans />} />
-          <Route path="vans/:id" element={<HostVansDetails />} />
+          <Route path="vans/:id" element={<HostVanDetails />}>
+            {/* <Route index element={<HostVansDetails />}  /> */}
+            <Route index element={<HostVanInfo />}  />
+            <Route path="pricing" element={<HostVanPricing />}  />
+            <Route path="photos" element={<HostVanPhotos />}  />
+          </Route>
           <Route path="reviews" element={<Reviews />} />
         </Route>
       </Route>
