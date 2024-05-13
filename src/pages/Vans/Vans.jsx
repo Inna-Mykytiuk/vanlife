@@ -5,22 +5,40 @@ import { getVans } from "../../../api";
 export default function Vans() {
     const [vans, setVans] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const typeFilter = searchParams.get("type");
     // console.log(typeFilter)
 
-    useEffect(() => {
-        async function loadVans() {
+useEffect(() => {
+    async function loadVans() {
+        setLoading(true);
+        try {
             const data = await getVans();
-            setVans(data);
-        
+        setVans(data);
+            
+        } catch (error) {
+            console.log(error);
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
     }
-        loadVans();
+    loadVans();
 }, []);
     
     const displayedVans = typeFilter ? vans.filter(van => van.type === typeFilter) : vans
 
     // console.log(displayedVans);
+
+    if (loading) {
+        return <h2>Loading...</h2>
+    }
+
+    if (error) {
+        return <h2>{error.message}</h2>
+    }
 
 
     const vanElements = displayedVans.map(van => (
@@ -61,7 +79,8 @@ export default function Vans() {
     }
 
     return (
-        <div className="container">
+        <section className="section">
+            <div className="container">
             <div className="van-list-container">
             <h1>Explore our van options</h1>
             <div className="van-list-filter-buttons">
@@ -83,5 +102,6 @@ export default function Vans() {
             </div>
         </div>
         </div>
+        </section>
     )
 }

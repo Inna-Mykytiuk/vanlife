@@ -8,11 +8,11 @@ export const Layout = () => {
   return (
     <div className="page-container">
       <Header />
-      <main>
+      {/* <main> */}
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
         </Suspense>
-      </main>
+      {/* </main> */}
       <Footer/>
     </div>
   )
