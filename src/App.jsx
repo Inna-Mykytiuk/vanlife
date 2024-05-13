@@ -15,6 +15,8 @@ const HostVanDetails = lazy(() => import('./pages/Host/HostVansDetails'));
 const HostVanInfo  = lazy(() => import('./pages/Host/HostVanInfo'));
 const HostVanPricing = lazy(() => import('./pages/Host/HostVanPricing'));
 const HostVanPhotos = lazy(() => import('./pages/Host/HostVanPhotos'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+
 
 
 import '../server'
@@ -46,6 +48,7 @@ function App() {
           </Route>
           <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="*" element={<NotFound />}/>
       </Route>
     </Routes>
   )
