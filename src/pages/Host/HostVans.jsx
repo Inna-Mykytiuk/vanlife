@@ -29,7 +29,7 @@ export default function HostVans() {
     ))
 
     return (
-        <section>
+        <div>
             <h1 className="host-vans-title">Your listed vans</h1>
             <div className="host-vans-list">
                 {
@@ -43,6 +43,6 @@ export default function HostVans() {
                         )
                 }
             </div>
-        </section>
+        </div>
     )
 }

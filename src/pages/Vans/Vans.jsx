@@ -9,6 +9,7 @@ export default function Vans() {
     const [error, setError] = useState(null);
 
     const typeFilter = searchParams.get("type");
+
     // console.log(typeFilter)
 
 useEffect(() => {

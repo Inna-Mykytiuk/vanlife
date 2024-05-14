@@ -6,7 +6,8 @@ import {  NavLink  } from 'react-router-dom';
 const HostLayout = () => {
   return (
 
-    <div className='container'>
+    <section className='section'>
+      <div className='container'>
       <nav className='host-nav'>
         <NavLink to="." className='nav-link' end >Dashboard</NavLink>
         <NavLink to="income" className='nav-link'>Income</NavLink>
@@ -17,6 +18,7 @@ const HostLayout = () => {
           <Outlet />
       </Suspense>
     </div>
+    </section>
 
   )
 }

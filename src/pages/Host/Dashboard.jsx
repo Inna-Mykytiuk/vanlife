@@ -3,12 +3,12 @@ import { Outlet } from 'react-router-dom';
 
 export default function Dashboard () {
   return (
-    <div>
-      Dashboard page
+    <section className='section'>
+      <p>Dashboard page</p>
       <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
       </Suspense>
-    </div>
+    </section>
   )
 }
 
