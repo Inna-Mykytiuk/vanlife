@@ -1,0 +1,1 @@
+import{c as n,j as s}from"./index-DM9lPFms.js";function i(){const{currentVan:e}=n();return s.jsxs("section",{children:[s.jsxs("h4",{children:["Name: ",e.name]}),s.jsxs("h4",{children:["Type: ",e.type]}),s.jsxs("h4",{children:["Description: ",e.description]}),s.jsx("h4",{children:"Visibility: public"})]})}export{i as default};
