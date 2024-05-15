@@ -13,7 +13,7 @@ body {
     height: 100%;
 } */
 body {
-    
+
     font-family: "Inter", sans-serif;
     background-color: rgba(211, 211, 211, 0.603);
     width: 100%;
@@ -93,7 +93,7 @@ img {
 
 @media (min-width: 1280px) {
     .container {
-    width: 1280px;
+        width: 1280px;
         padding: 0 20px;
         margin: 0 auto;
     }
@@ -110,7 +110,13 @@ img {
     justify-content: space-between;
 }
 
+.avatar {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: #4D4D4D;
 
+}
 
 .site-wrapper {
     min-height: 100vh;
@@ -241,7 +247,7 @@ footer {
 
 .section {
     padding-top: 80px;
-    
+
 }
 
 .logo {
@@ -315,25 +321,25 @@ footer {
 @media (min-width: 768px) {
     .home-container {
         justify-content: start;
-            max-width: 400px;
-            padding-top: 180px;
-        }
+        max-width: 400px;
+        padding-top: 180px;
+    }
 
     .home-container h1 {
         font-weight: 700;
         font-size: 56px;
     }
 
-        .home-container a {
-            max-width: 300px;
-        }
+    .home-container a {
+        max-width: 300px;
+    }
 }
 
 @media (min-width: 1280px) {
     .home-container {
-            max-width: 600px;
-            padding-top: 220px;
-        }
+        max-width: 600px;
+        padding-top: 220px;
+    }
 }
 
 
