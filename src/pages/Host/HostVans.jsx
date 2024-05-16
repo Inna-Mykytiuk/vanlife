@@ -1,23 +1,14 @@
-// import { useEffect, useState } from "react"
-import { Link, useLoaderData, } from "react-router-dom";
-import { getHostVans } from "../../../api";
-import { requireAuth } from "../../../utils";
-
-export async function loader({ request }) {
-    await requireAuth(request);
-    return getHostVans();
-}
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function HostVans() {
-    // const [vans, setVans] = useState([])
+    const [vans, setVans] = useState([])
 
-    const vans = useLoaderData();
-
-    // useEffect(() => {
-    //     fetch("/api/host/vans")
-    //         .then(res => res.json())
-    //         .then(data => setVans(data.vans))
-    // }, [])
+    useEffect(() => {
+        fetch("/api/host/vans")
+            .then(res => res.json())
+            .then(data => setVans(data.vans))
+    }, [])
 
     //   console.log(vans);
 
@@ -38,13 +29,22 @@ export default function HostVans() {
     ))
 
     return (
-        <div>
-            <h1 className="host-vans-title">Your listed vans</h1>
-            <div className="host-vans-list">
-                <section>
-                    {hostVansEls}
-                </section>
+        <section>
+            <div>
+                <h1 className="host-vans-title">Your listed vans</h1>
+                <div className="host-vans-list">
+                    {
+                        vans.length > 0 ? (
+                            <section>
+                                {hostVansEls}
+                            </section>
+
+                        ) : (
+                            <h2>Loading...</h2>
+                        )
+                    }
+                </div>
             </div>
-        </div>
+        </section>
     )
 }

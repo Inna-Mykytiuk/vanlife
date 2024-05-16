@@ -1,4 +1,4 @@
-// import { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
@@ -14,9 +14,9 @@ const HostLayout = () => {
           <NavLink to="vans" className='nav-link'>Vans</NavLink>
           <NavLink to="reviews" className='nav-link'>Reviews</NavLink>
         </nav>
-        {/* <Suspense fallback={<div>Loading...</div>}> */}
-        <Outlet />
-        {/* </Suspense> */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </div>
     </section>
 
