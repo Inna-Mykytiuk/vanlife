@@ -1,0 +1,7 @@
+{
+  "linksText": [
+    { "path": "/host", "text": "Host" },
+    { "path": "/about", "text": "About" },
+    { "path": "/vans", "text": "Vans" }
+  ]
+}
