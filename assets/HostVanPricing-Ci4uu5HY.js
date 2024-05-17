@@ -1,1 +1,0 @@
-import{c as n,j as s}from"./index-DfdJ0DmK.js";function r(){const{currentVan:t}=n();return s.jsxs("h4",{className:"host-van-price",children:["$",t.price,s.jsx("span",{children:"/day"})]})}export{r as default};
