@@ -13,7 +13,6 @@ body {
     height: 100%;
 } */
 body {
-
     font-family: "Inter", sans-serif;
     background-color: rgba(211, 211, 211, 0.603);
     width: 100%;
@@ -125,21 +124,26 @@ img {
 }
 
 header {
-    position: absolute;
-    z-index: 2;
+    position: relative;
+    z-index: 1;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 0;
+    background: #4D4D4D;
+    box-shadow: 4px 4px 30px 0px rgb(73 40 35 / 60%)
 }
 
-/* header .site-logo {
-    color: black;
-    margin-right: auto;
+
+
+.site-logo {
+    color: white;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 25px;
-} */
+    font-size: 32px;
+    text-decoration: none;
+}
 
 .nav-list {
     display: flex;
@@ -150,10 +154,10 @@ header {
 .nav-link {
     position: relative;
     text-decoration: none;
-    color: #4D4D4D;
+    color: white;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
-    /* padding: 5px 15px; */
+
 }
 
 
@@ -206,8 +210,8 @@ nav {
 } */
 
 footer {
-    background-color: #161616;
-    color: #AAAAAA;
+    background-color: #4D4D4D;
+    color: white;
     height: 74px;
     display: flex;
     flex-shrink: 0;
@@ -261,9 +265,6 @@ footer {
 .home-section {
     width: 100%;
     height: 100vh;
-    position: relative;
-    top: 0;
-    z-index: 1;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./assets/images/hero.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -291,31 +292,34 @@ footer {
 .home-container p {
     max-width: 300px;
     line-height: 24px;
+    color: white
 }
 
 .home-container a {
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    background-color: #FF8C38;
     border: none;
     max-width: 100%;
     margin-top: 27px;
     padding-block: .75rem;
-    color: white;
     font-weight: 700;
-    border: solid 1px #FF8C38;
     border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 4px 4px 30px 0px rgb(109 66 58 / 90%);
     transition: all 0.3s ease-in-out;
-}
-
-.home-container a:hover {
+    cursor: pointer;
     border: solid 1px white;
     color: white;
     background-color: transparent;
     box-shadow: 4px 4px 30px 0px rgb(207 188 185 / 90%);
+
+}
+
+.home-container a:hover {
+
+
+    background-color: #FF8C38;
+    border: solid 1px #FF8C38;
+    box-shadow: 4px 4px 30px 0px rgb(109 66 58 / 90%);
 }
 
 @media (min-width: 768px) {

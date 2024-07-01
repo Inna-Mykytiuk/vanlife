@@ -1,5 +1,4 @@
 import { Link, NavLink } from 'react-router-dom';
-import logo from "../assets/images/logo.png";
 import linksData from "../data/common.json";
 
 
@@ -11,7 +10,7 @@ export const Header = () => {
       <div className='container'>
         <div className='nav'>
           <Link to="/" className='site-logo'>
-            <img alt="van" src={logo} className='logo' />
+            VanLife
           </Link>
           <nav className='nav-list'>
             {linksText.map(link => (
