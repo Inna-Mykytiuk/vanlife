@@ -8,10 +8,6 @@
     box-sizing: border-box;
 }
 
-/* html,
-body {
-    height: 100%;
-} */
 body {
     font-family: "Inter", sans-serif;
     background-color: rgba(211, 211, 211, 0.603);
@@ -157,7 +153,10 @@ header {
     color: white;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
+}
 
+.nav-link:hover {
+    color: #FF8C38;
 }
 
 
@@ -183,9 +182,7 @@ header {
     color: #FF8C38;
 }
 
-.nav-link:hover {
-    color: #FF8C38;
-}
+
 
 header button {
     cursor: pointer;
@@ -205,9 +202,6 @@ nav {
     display: flex;
 }
 
-/* main {
-    margin-bottom: 84px;
-} */
 
 footer {
     background-color: #4D4D4D;
@@ -534,33 +528,22 @@ i[class*='van-type-'] {
 .host-nav {
     display: flex;
     margin-bottom: 30px;
+    gap: 20px;
 }
 
 .host-nav a {
     text-decoration: none;
     color: #4D4D4D;
-    font-weight: 500;
-    padding: 5px 20px;
-}
-
-.host-nav a:hover {
-    color: #161616;
-    text-decoration: underline;
     font-weight: 600;
 }
+
 
 .host-van-link-wrapper {
     color: unset;
     text-decoration: unset;
 }
 
-.host-vans-list {
-    padding-inline: 26px;
-}
 
-.host-vans-title {
-    padding-inline: 26px;
-}
 
 .host-van-single {
     display: flex;
