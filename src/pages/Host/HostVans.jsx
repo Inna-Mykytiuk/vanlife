@@ -29,22 +29,18 @@ export default function HostVans() {
     ))
 
     return (
-        <section>
-            <div>
-                <h1 className="host-vans-title">Your listed vans</h1>
-                <div className="host-vans-list">
-                    {
-                        vans.length > 0 ? (
-                            <section>
-                                {hostVansEls}
-                            </section>
+        <>
+            {
+                vans.length > 0 ? (
+                    <section className="section">
+                        <h1 className="host-vans-title">Your listed vans</h1>
+                        {hostVansEls}
+                    </section>
 
-                        ) : (
-                            <h2>Loading...</h2>
-                        )
-                    }
-                </div>
-            </div>
-        </section>
+                ) : (
+                    <h2>Loading...</h2>
+                )
+            }
+        </>
     )
 }

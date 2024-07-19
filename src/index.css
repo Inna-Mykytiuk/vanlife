@@ -784,9 +784,6 @@ i[class*='van-type-'] {
     align-items: center;
 }
 
-.host-dashboard-vans .host-vans-list {
-    padding-inline: 0;
-}
 
 .host-income {
     padding-inline: 26px;
