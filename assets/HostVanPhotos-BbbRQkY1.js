@@ -1,0 +1,1 @@
+import{c as e,j as s}from"./index-Cn1yc2OR.js";function n(){const{currentVan:t}=e();return s.jsx("section",{children:s.jsx("img",{alt:t.name,src:t.imageUrl,className:"host-van-detail-image"})})}export{n as default};
