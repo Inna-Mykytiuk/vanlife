@@ -1,0 +1,1 @@
+import{j as s,r as e,O as i}from"./index-DsQwVn4M.js";function t(){return s.jsxs("section",{className:"section",children:[s.jsx("p",{children:"Reviews page"}),s.jsx(e.Suspense,{fallback:s.jsx("div",{children:"Loading..."}),children:s.jsx(i,{})})]})}export{t as default};
